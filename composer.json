@@ -1,0 +1,16 @@
+{
+    "name": "rubricate/session",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Estefanio NS",
+            "email": "estefanions@gmail.com"
+        }
+    ],
+    "require": { },
+    "autoload": {
+        "psr-4": {
+            "Rubricate\\Session\\": "Rubricate/Session/"
+        }
+    }
+}
