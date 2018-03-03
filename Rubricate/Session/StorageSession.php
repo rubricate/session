@@ -17,11 +17,9 @@ class StorageSession
 
 
 
-
     public function start()
     {
-        if(!self::hasStart())
-        {
+        if(!self::hasStart()) {
             session_start();
         }
 
@@ -30,25 +28,15 @@ class StorageSession
 
 
 
-
-
-
-
-
     public function cacheExpire($num)
     {
-        if(is_numeric($num))
-        {
+        if(is_numeric($num)) {
             session_cache_expire($num);
         }
 
         return $this;
     } 
     
-
-
-
-
 
 
     public function delAll() 
@@ -61,20 +49,11 @@ class StorageSession
 
 
 
-
-
-
     public function set($key, $value)
     {
         $_SESSION[$key] = $value;
         return $this;
     }
-
-
-
-
-
-
 
 
 
@@ -85,24 +64,15 @@ class StorageSession
 
 
 
-
-
-
-
-
-
     public function del($key) 
     {
-
-        if ($this->has($key)) 
-        {
+        if($this->has($key)) {
             unset($_SESSION[$key]);
-            return TRUE;
+            return true;
         }
 
-        return FALSE;
+        return false;
     }
-
 
 
 
@@ -113,10 +83,6 @@ class StorageSession
 
 
 
-
-
-
-
     public function getAll()
     {
         return $_SESSION;
@@ -124,15 +90,10 @@ class StorageSession
 
 
 
-
-
     public function has($key) 
     {
-        return array_key_exists($key, self::getAll() );
+        return array_key_exists($key, self::getAll());
     }
-
-
-
 
 
 
@@ -140,9 +101,6 @@ class StorageSession
     {
         return ( in_array(self::get($key), $valueValidArr) );
     }
-
-
-
 
 
 
@@ -154,3 +112,4 @@ class StorageSession
 
 
 }
+
