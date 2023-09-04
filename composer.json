@@ -7,7 +7,9 @@
             "email": "estefanions@gmail.com"
         }
     ],
-    "require": { },
+    "require": {
+        "php": ">=5.4"
+    },
     "autoload": {
         "psr-4": {
             "Rubricate\\Session\\": "Rubricate/Session/"
